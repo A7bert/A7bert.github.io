@@ -1,0 +1,65 @@
+.hero {
+  position: relative;
+
+  .hero-image {
+
+    @include breakpoint-down(small) {
+      min-height: 18em;
+    }
+
+    &-1 {
+      background-image: url('/images/WechatIMG130.jpg');
+    }
+
+    &-2 {
+      background-image: url('/images/WechatIMG275.jpg');
+    }
+
+    &-3 {
+      background-image: url('/images/WechatIMG274.jpg');
+    }
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    color: $white;
+    background-color: rgba($color: #4f7fc2, $alpha: 0.7);
+
+    h1 {
+      font-size: 1.625em;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.25em;
+      font-weight: 400;
+    }
+
+    @include breakpoint-down(small) {
+      h1 {
+        font-size: 1.25em;
+      }
+
+      h2 {
+        font-size: 1em;;
+      }
+    }
+  }
+}
+
+.swiper-slide {
+  position: absolute;
+  min-height: 27em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: -1;
+}
